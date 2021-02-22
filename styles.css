@@ -1,7 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+
 body {
-    margin: 0;
-    font-family: "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+  font-family: 'Roboto Mono', 'Open Sans', sans-serif, monospace;
+  height: 100vh;
+  background: #222831;
+  color: #EEEEEE;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+span {
+  color: #00adb5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 3rem;
+}
+.txt-type > .txt {
+  border-right: 1rem solid #EEEEEE;
+  animation: blink 800ms infinite normal;
+}
+@keyframes blink {
+  from {border-right-color: rgba(255,255,255 0);}
+  to {border-right-color: transparent;}  
+}
+
+
+@media(min-width: 1200px) {
+  h1 {
+    font-size: 1.6rem;
   }
-  
+}
+
+@media(max-width: 800px) {
+  .container{
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2{
+    font-size: 1.2rem;
+  }
+}
+
+@media(max-width: 500px){
+  h1 {
+    font-size: 1.2rem;
+  }
+  h2{
+    font-size: 1rem;
+  }
+}
  
