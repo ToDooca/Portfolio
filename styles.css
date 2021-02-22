@@ -3,13 +3,26 @@
 body {
   font-family: 'Roboto Mono', 'Open Sans', sans-serif, monospace;
   height: 100vh;
-  background: #222831;
+  background: #222831 url(assets/img/Background.png) no-repeat center center / cover;
   color: #EEEEEE;
   overflow: hidden;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+
+p {
+  visibility: hidden;
+  animation: type 3s steps(48), blink 800ms infinite normal;
+  animation-delay: 10s;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.6rem solid #EEEEEE;
+  width: 48ch;
 }
 
 span {
@@ -22,42 +35,38 @@ span {
   justify-content: center;
   height: 100%;
   padding: 0 3rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: 4px 3px 8px 1px #111;
+  	-webkit-box-shadow: 4px 3px 8px 1px #111;
+  width: 500px;
+  height: 300px
 }
 .txt-type > .txt {
   border-right: 1rem solid #EEEEEE;
   animation: blink 800ms infinite normal;
 }
+
 @keyframes blink {
-  from {border-right-color: rgba(255,255,255 0);}
-  to {border-right-color: transparent;}  
+  from {
+    visibility: visible;
+    border-right-color: rgba(255,255,255 0);
+  }
+  to {
+    border-right-color: transparent;
+  }  
 }
 
-
-@media(min-width: 1200px) {
-  h1 {
-    font-size: 1.6rem;
+@keyframes type {
+  0% {
+    width: 0ch;
   }
-}
-
-@media(max-width: 800px) {
-  .container{
-    padding: 0 1rem;
-  }
-
-  h1 {
-    font-size: 1.4rem;
-  }
-  h2{
-    font-size: 1.2rem;
-  }
-}
-
-@media(max-width: 500px){
-  h1 {
-    font-size: 1.2rem;
-  }
-  h2{
-    font-size: 1rem;
+  100% {
+    width: 48ch;
   }
 }
  
