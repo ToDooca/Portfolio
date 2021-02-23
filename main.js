@@ -50,7 +50,7 @@ TypeWriter.prototype.type = function () {
         typeSpeed = this.wait;
         this.isDeleting = true;
         if (this.wordIndex > 0) {
-            document.querySelector(".txt-type > .txt").style.border = "transparent";
+            document.querySelector('.txt-type > .txt').style.border = "transparent";
             return stop;
         }
 
