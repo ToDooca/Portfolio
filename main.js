@@ -4,6 +4,8 @@ let cDay = currentDate.getDate();
 let cMonth = currentDate.getMonth() + 1;
 let cYear = currentDate.getFullYear();
 
+
+
 const TypeWriter = function (txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
     this.words = words;
@@ -48,6 +50,7 @@ TypeWriter.prototype.type = function () {
         typeSpeed = this.wait;
         this.isDeleting = true;
         if (this.wordIndex > 0) {
+            document.querySelector(".txt-type > .txt").style.border = "transparent";
             return stop;
         }
 
@@ -57,10 +60,11 @@ TypeWriter.prototype.type = function () {
         typeSpeed = 500;
     }
     const timer = setTimeout(() => this.type(), typeSpeed)
+
     function stop() {
         clearTimeout(timer);
     }
-    console.log(this.wordIndex);
+
 }
 
 //Init On DOM Load

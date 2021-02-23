@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
 
 body {
-  /* font-family: 'Roboto Mono', 'Open Sans', sans-serif, monospace; */
+  /* font: 1.4rem 'Roboto Mono', 'Open Sans', sans-serif, monospace; */
   font: 1.4rem Inconsolata, monospace;
   height: 100vh;
   background: #222831 url(assets/img/Background.png) no-repeat center center / cover;
@@ -9,28 +9,11 @@ body {
   overflow: hidden;
 }
 
-/* body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  user-select: none;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(black, 0.15),
-    rgba(black, 0.15) 1px,
-    transparent 1px,
-    transparent 2px,
-  );
-} */
-
 .links{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 150px;
+  height: 120px;
   width: 150px;
 }
 
@@ -46,7 +29,17 @@ p {
   text-shadow: 0 0 5px #00adb5;
   animation: show 800ms infinite normal;
   animation-delay: 13.3s;
+}
 
+.indent-last {
+  visibility: hidden;
+  margin-left: 30px;
+  margin-bottom: 15px;
+  color: #00adb5;
+  text-shadow: 0 0 5px #00adb5;
+  animation: show 800ms infinite normal;
+  animation-delay: 13.3s;
+  margin-bottom: 0px;
 }
 
 .new-row {
@@ -58,8 +51,8 @@ p {
 .socials {
   word-wrap: break-word;
   visibility: hidden;
-  animation: type 3s steps(44), blink 800ms infinite normal;
-  animation-delay: 10s;
+  animation: type 3s 10s steps(44), blink 800ms 10s infinite , stopBlink 1s infinite 13.3s;
+  /* animation-delay: 10s; */
   overflow: hidden;
   white-space: nowrap;
   border-right: 0.8rem solid #EEEEEE;
@@ -91,6 +84,23 @@ span {
 .txt-type > .txt {
   border-right: 0.8rem solid #EEEEEE;
   animation: blink 800ms infinite normal;
+}
+
+.last-line {
+  visibility: hidden;
+  border-right: 0.8rem solid #EEEEEE;
+  animation: blink 800ms infinite normal;
+  animation-delay: 13.5s;
+  width: 2ch;
+}
+
+@keyframes stopBlink {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 @keyframes blink {
