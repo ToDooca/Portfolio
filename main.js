@@ -1,3 +1,9 @@
+
+const currentDate = new Date();
+let cDay = currentDate.getDate();
+let cMonth = currentDate.getMonth() + 1;
+let cYear = currentDate.getFullYear();
+
 const TypeWriter = function (txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
     this.words = words;
