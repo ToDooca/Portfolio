@@ -6,12 +6,10 @@
 
 
 body {
-  /* font: 1.4rem 'Roboto Mono', 'Open Sans', sans-serif, monospace; */
   font: 1.4rem Inconsolata, monospace;
   height: 100vh;
   background: linear-gradient(#222831a1, #222831a1), url(assets/img/Background.jpg) no-repeat center center / cover;
-  /* background: #222831 url(assets/img/BG.jpg) no-repeat center center / cover; */
-  /* background: #222831; */
+  background-size: auto;
   color: #EEEEEE;
   overflow: hidden;
   margin: 0;
@@ -245,6 +243,13 @@ p {
     visibility: visible;
   }
   to{
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  body{
+    background: linear-gradient(#222831a1, #222831a1), url(assets/img/Background-ph.jpg) no-repeat center center / cover;
+    background-size: auto;
   }
 }
  
