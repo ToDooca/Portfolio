@@ -100,10 +100,97 @@ p {
   margin: auto;
   box-shadow: 4px 3px 8px 1px rgb(31, 31, 31);
   	-webkit-box-shadow: 4px 3px 8px 1px rgb(31, 31, 31);
-  width: 580px;
-  height: 380px;
+  width: 665px;
+  height: 360px;
   background-color: #393e46e1;
   backdrop-filter: blur(1px);
+}
+
+.toolbar {
+  display: inline;
+  float: right;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 390px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 665px;
+  height: 30px;
+  box-shadow: 4px 3px 8px 1px rgb(31, 31, 31);
+  	-webkit-box-shadow: 4px 3px 8px 1px rgb(31, 31, 31);
+  background-color: #22252be1;
+  backdrop-filter: blur(1px);
+}
+
+.logo {
+  width: 200px;
+  height: 30px;
+  display: inline;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.terminal-logo {
+  user-select: none;
+  float: left;
+  margin: 0;
+  margin-right: 11px;
+  margin-left: 4px;
+  padding: 0;
+  font-weight: bold;
+  color: #66c2c7;
+  text-shadow: 0 0 5px #66c2c7;
+}
+
+.terminal-title {
+  user-select: none;
+  float: left;
+  margin: 0;
+  margin-right: 4px;
+  margin-left: 4px;
+  padding: 0;
+  padding-top: 6px;
+  font-size: 0.9rem;
+}
+
+.icons {
+  width: 100px;
+  height: 30px;
+  display: inline;
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+.x {
+  float: right;
+  margin: 0;
+  margin-right: 4px;
+  margin-left: 4px;
+  padding: 0;
+  padding-top: px
+}
+._o{
+  float: right;
+  margin: 0;
+  margin-right: 4px;
+  margin-left: 4px;
+  padding: 0;
+}
+
+.x:hover {
+  color: #f85a5a;
+  text-shadow: 0 0 5px #f85a5ac5;
+  cursor: pointer;
+}
+
+._o:hover {
+  color: #9c9c9c;
+  text-shadow: 0 0 5px #9c9c9c;
+  cursor: pointer;
 }
 
 .txt-type > .txt {
@@ -122,7 +209,7 @@ p {
   border-right: 0.8rem solid #EEEEEE;
   animation: blink 800ms infinite normal;
   animation-delay: 13.5s;
-  width: 18ch;
+  width: 13ch;
 }
 
 @keyframes stopBlink {
