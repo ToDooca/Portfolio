@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Source+Code+Pro:wght@200;400&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
-
 body {
-  font: 1.3rem Roboto, consolas, monospace;
+  font: 1.3rem "Noto Sans Mono", "Source Code Pro", monospace;
   height: 100vh;
   background: linear-gradient(#222831a1, #222831a1), url(assets/img/Background.jpg) no-repeat center center / cover;
   background-size: auto;
@@ -46,7 +44,6 @@ p {
   text-shadow: 0 0 5px #00adb5;
   animation: show 800ms infinite normal;
   animation-delay: 13.3s;
-  margin-bottom: 0px;
 }
 
 .new-row {
@@ -83,7 +80,7 @@ p {
 
 .info > p {
   display: inline;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .container {
@@ -135,9 +132,7 @@ p {
 .terminal-logo {
   user-select: none;
   float: left;
-  margin: 0;
-  margin-right: 11px;
-  margin-left: 4px;
+  margin: 0 11px 0 4px;
   padding: 0;
   font-weight: bold;
   color: #66c2c7;
@@ -147,11 +142,8 @@ p {
 .terminal-title {
   user-select: none;
   float: left;
-  margin: 0;
-  margin-right: 4px;
-  margin-left: 4px;
-  padding: 0;
-  padding-top: 6px;
+  margin: 0 4px;
+  padding: 5px 0 0;
   font-size: 0.9rem;
 }
 
@@ -164,19 +156,23 @@ p {
   margin: 0;
 }
 
+._{
+  float: right;
+  margin: 4px 3px;
+  padding: 0;
+  font-size: 18px;
+}
+
+.o{
+  float: right;
+  margin: 7px 3px;
+  padding: 0;
+  font-size: 18px;
+}
+
 .x {
   float: right;
-  margin: 0;
-  margin-right: 4px;
-  margin-left: 4px;
-  padding: 0;
-  padding-top: px
-}
-._o{
-  float: right;
-  margin: 0;
-  margin-right: 4px;
-  margin-left: 4px;
+  margin: 0 2px;
   padding: 0;
 }
 
@@ -186,7 +182,7 @@ p {
   cursor: pointer;
 }
 
-._o:hover {
+._:hover,.o:hover {
   color: #9c9c9c;
   text-shadow: 0 0 5px #9c9c9c;
   cursor: pointer;
@@ -253,4 +249,3 @@ p {
     background-size: auto;
   }
 }
- 
